@@ -8,7 +8,7 @@
 
 **Minimalist visual tab switcher for Chromium-based browsers**
 
-_Built with AI assistance using [Kiro](https://kiro.ai)_
+_Built with AI assistance
 
 [English](#english) | [Русский](#russian)
 
