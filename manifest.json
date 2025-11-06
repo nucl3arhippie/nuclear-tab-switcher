@@ -1,0 +1,43 @@
+{
+  "manifest_version": 3,
+  "name": "Enhanced Tab Switcher",
+  "version": "1.0.0",
+  "description": "Minimalist visual tab switcher with keyboard shortcuts and elegant design for Chromium browsers",
+  "permissions": [
+    "tabs",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "commands": {
+    "toggle-tab-switcher": {
+      "suggested_key": {
+        "default": "Ctrl+Q"
+      },
+      "description": "Toggle tab switcher overlay"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["overlay.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["icons/placeholder-favicon.png"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

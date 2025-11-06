@@ -1,0 +1,214 @@
+/* Overlay styles for Enhanced Tab Switcher */
+/* Minimalist design with clean aesthetics */
+
+/* Base overlay structure */
+#tab-switcher-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.15s ease-out;
+}
+
+#tab-switcher-overlay.closing {
+  animation: fadeOut 0.1s ease-in;
+}
+
+.tab-switcher-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+/* Tab grid layout */
+.tab-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 260px));
+  gap: 16px;
+  max-width: 1400px;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Responsive grid columns */
+@media (max-width: 899px) {
+  .tab-grid {
+    grid-template-columns: repeat(3, minmax(220px, 260px));
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1199px) {
+  .tab-grid {
+    grid-template-columns: repeat(4, minmax(220px, 260px));
+  }
+}
+
+@media (min-width: 1200px) {
+  .tab-grid {
+    grid-template-columns: repeat(5, minmax(220px, 260px));
+  }
+}
+
+/* Tab card components */
+.tab-card {
+  position: relative;
+  background: #1a1a1a;
+  border-radius: 8px;
+  border: 1px solid #2a2a2a;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.tab-card:hover {
+  background: #222222;
+  border-color: #3a3a3a;
+  transform: translateY(-2px);
+}
+
+.tab-screenshot {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  background: #0f0f0f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.tab-screenshot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tab-favicon {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 18px;
+  height: 18px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.tab-favicon img {
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+}
+
+.tab-info {
+  padding: 10px 12px;
+  color: #ffffff;
+}
+
+.tab-title {
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 3px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  color: #e0e0e0;
+}
+
+.tab-url {
+  font-size: 11px;
+  color: #888888;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.tab-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #aaaaaa;
+  font-size: 16px;
+  font-weight: normal;
+  cursor: pointer;
+  opacity: 0;
+  transition: all 0.15s ease;
+  z-index: 10;
+}
+
+.tab-card:hover .tab-close-btn {
+  opacity: 1;
+}
+
+.tab-close-btn:hover {
+  background: #d32f2f;
+  color: #ffffff;
+}
+
+/* Active tab styles */
+.tab-card.active {
+  border: 2px solid #4a90e2;
+  background: #252525;
+}
+
+.tab-card.active:hover {
+  background: #2a2a2a;
+  transform: translateY(-2px);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* Fallback for tabs without screenshots */
+.tab-screenshot-fallback {
+  width: 100%;
+  height: 100%;
+  background: #0f0f0f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tab-screenshot-fallback img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  opacity: 0.6;
+}
