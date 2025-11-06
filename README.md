@@ -20,7 +20,7 @@ _Built with AI assistance
 
 ### ✨ Features
 
--   **⌨️ Keyboard Navigation** - Quick tab switching with `ALT+Q` shortcut
+-   **⌨️ Keyboard Navigation** - Quick tab switching with `CTRL+Q` shortcut
 -   **🎨 Minimalist Design** - Clean interface without distractions
 -   **�️ Mousle Support** - Left-click to switch, middle-click to close tabs
 -   **🔍 Visual Preview** - See tab favicons and information at a glance
@@ -53,7 +53,7 @@ _Built with AI assistance
 
 | Shortcut     | Action                    |
 | ------------ | ------------------------- |
-| `ALT+Q`      | Open/close tab switcher   |
+| `CTRL+Q`      | Open/close tab switcher   |
 | `Tab`        | Navigate forward/backward |
 | `Arrow Keys` | Navigate through grid     |
 | `Enter`      | Switch to selected tab    |
@@ -72,7 +72,7 @@ _Built with AI assistance
 2. Find "Enhanced Tab Switcher"
 3. Set your preferred key combination
 
-> **Note:** Chrome doesn't allow overriding `Ctrl+Tab`, so `ALT+Q` is used by default.
+> **Note:** Chrome doesn't allow overriding `Ctrl+Tab`, so `CTRL+Q` is used by default.
 
 ### 🛠️ Technical Details
 
@@ -107,7 +107,7 @@ MIT License - see [LICENSE](LICENSE) file
 
 ### ✨ Возможности
 
--   **⌨️ Навигация с клавиатуры** - Быстрое переключение вкладок через `ALT+Q`
+-   **⌨️ Навигация с клавиатуры** - Быстрое переключение вкладок через `CTRL+Q`
 -   **🎨 Минималистичный дизайн** - Чистый интерфейс без отвлекающих элементов
 -   **🖱️ Поддержка мыши** - ЛКМ для переключения, СКМ для закрытия вкладок
 -   **🔍 Визуальный предпросмотр** - Просмотр иконок и информации о вкладках
@@ -140,7 +140,7 @@ MIT License - see [LICENSE](LICENSE) file
 
 | Комбинация | Действие                      |
 | ---------- | ----------------------------- |
-| `ALT+Q`    | Открыть/закрыть переключатель |
+| `CTRL+Q`    | Открыть/закрыть переключатель |
 | `Tab`      | Навигация вперед/назад        |
 | `Стрелки`  | Навигация по сетке            |
 | `Enter`    | Переключиться на вкладку      |
@@ -159,7 +159,7 @@ MIT License - see [LICENSE](LICENSE) file
 2. Найдите "Enhanced Tab Switcher"
 3. Установите нужную комбинацию
 
-> **Примечание:** Chrome не позволяет переопределять `Ctrl+Tab`, поэтому используется `ALT+Q`.
+> **Примечание:** Chrome не позволяет переопределять `Ctrl+Tab`, поэтому используется `CTRL+Q`.
 
 ### 🛠️ Технические детали
 
